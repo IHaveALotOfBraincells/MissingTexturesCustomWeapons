@@ -2816,10 +2816,10 @@
 			"mouse_pressed_sound"	"ui/item_heavy_emp_pickup.wav"
 			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 		}
-		"3317" // Combat Syringe Gun
+		"4667" // Combat Syringe Gun
 		{
-			"name"				"TF_WEAPON_SYRINGEGUN_MEDIC"
-			"item_name"			"Combat Syringe Gun"
+			"name"				"mp40"
+			"item_name"			"MP40"
 			"item_type_name"	"#TF_Weapon_SyringeGun"
 			"item_description"	"I have no idea what I'm doing what the fuck is this shit bruh."
 			"item_quality"		"normal"
@@ -2839,6 +2839,11 @@
 			}
 			"attributes"
 			{
+				"mp40 explain"
+				{
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
+				}
 				"damage bonus"
 				{
 					"attribute_class"		"mult_dmg"
@@ -2852,7 +2857,7 @@
 				"restore health on kill"
 				{
 					"attribute_class"		"restore_health_on_kill"
-					"value"				"20"
+					"value"				"30"
 				}
 				"fire rate penalty"
 				{
@@ -2864,10 +2869,16 @@
 					"attribute_class"	"mult_clipsize"
 					"value"				"0.75"
 				}
-				"health drain medic"
+				"mp40 regen explain"
 				{
-					"attribute_class"	"add_health_regen"
-					"value"	"-3"
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
+				}
+				"hidden separator" "1"
+				"medic regen penalty"
+				{
+					"attribute_class"	"medic_regen"
+					"value"	"0"
 				}
 				"override projectile type"
 				{
@@ -2877,8 +2888,8 @@
 			}
 			"visuals"
 			{
-				"sound_single_shot"    "Weapon_Overdose.Single"
-				"sound_burst"    "Weapon_Overdose.SingleCrit"
+				"sound_single_shot"    "Weapon_mp40.Single"
+				"sound_burst" 		   "Weapon_mp40.SingleCrit"
 			}
 			"image_inventory"		"backpack/weapons/c_models/mp40/c_mp40"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -2891,9 +2902,9 @@
 			"item_type_name"	"#TF_Weapon_FlameThrower"
 			"item_description"	"#TF_Weapon_FlameThrower_Desc"
 			"item_quality"		"normal"
-
-			"item_class"	"tf_weapon_flamethrower"
-			"item_slot"		"primary"
+			"extra_wearable" 	"models/player/items/pyro/fireman_helmet.mdl"
+			"item_class"		"tf_weapon_flamethrower"
+			"item_slot"			"primary"
 			"used_by_classes"
 			{
 				"Pyro"	"1"
@@ -2919,6 +2930,11 @@
 			}
 			"attributes"
 			{
+				"mark for death"
+				{
+					"attribute_class"	"mark_for_death"
+					"value"	"1"
+				}
 				"slow enemy on hit major"
 				{
 					"attribute_class"		"mult_onhit_enemyspeed_major"
@@ -2929,10 +2945,15 @@
 					"attribute_class"	"mult_dmg"
 					"value"	"0.35"
 				}
-				"weapon burn dmg reduced"
+				"weapon burn time reduced"
 				{
-					"attribute_class"	"mult_wpn_burndmg"
-					"value"	"0"
+					"attribute_class"	"mult_wpn_burntime"
+					"value"	"-200"
+				}
+				"weapon burn time reduced"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"	"-200"
 				}
 			}
 			"visuals"
@@ -2948,22 +2969,6 @@
 					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
 					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
 				}
-			}
-			"visuals_red"
-			{
-				"beam_effect_crit"		"firehose_steam_crit_red"
-			}
-			"visuals_blu"
-			{
-				"beam_effect_crit"		"firehose_steam_crit_blue"
-			}
-			"visuals_grn"
-			{
-				"beam_effect_crit"		"firehose_steam_crit_green"
-			}
-			"visuals_ylw"
-			{
-				"beam_effect_crit"		"firehose_steam_crit_yellow"
 			}
 
 			"image_inventory"			"backpack/weapons/w_models/w_firehose"
@@ -3041,7 +3046,7 @@
 			"item_class"		"tf_wearable"
 			"show_in_armory"	"1"
 			"item_type_name" 	"Supply belt"
-			"item_name"	"Supply Pouches"
+			"item_name"	"(rc) Supply Pouches"
 			"item_description"	""
 			"item_slot"		"secondary"
 			"equip_region"	"back"
@@ -3128,10 +3133,11 @@
 					"attribute_class"		"mult_dmg"
 					"value"				"1.25"
 				}
+				"hidden separator" "1"
 				"Reload time decreased"
 				{
 					"attribute_class"		"mult_reload_time"
-					"value" "0.8"
+					"value" "0.75"
 				}
 				//"spread penalty"
 				//{
@@ -3213,32 +3219,74 @@
 			"mouse_pressed_sound"	"ui/item_shovel_pickup.wav"
 			"drop_sound"		"ui/item_shovel_drop.wav"
 		}
-		"6113" // leverrifle
+		"6740"
 		{
-			"name"				"slop"
-			"item_name"			"slop"
-			"item_type_name"	"slop"
-			"item_description"	"#TF_Weapon_Scattergun_Desc"
-			"item_quality"		"normal"
-
-			"item_class"	"tf_weapon_scattergun"
-			"item_slot"		"primary"
+			"name"						"shortstop"
+			"item_class"				"tf_weapon_scattergun"
+			"show_in_armory"			"1"
+			"item_slot"					"primary"
+			"anim_slot"					"secondary"
+			"propername"				"1"
+			"item_name"					"Shortstop"
+			"item_type_name"			"Derringer"
+			"item_description"			"The latest in high-attitude personal defense!"
+			"item_logname"				"shortstop"
+			"item_iconname"				"shortstop"
+			"image_inventory"			"backpack/workshop/weapons/c_models/c_shortstop/c_shortstop"
+			"model_world"				"models/workshop/weapons/c_models/c_shortstop/c_shortstop.mdl"
+			"model_player"				"models/weapons/v_models/v_shortstop/v_shortstop_scout_db.mdl"
+			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
-				"Scout"	"1"
+				"scout"					"1"
 			}
-
-			"model_player"		"models/weapons/v_models/v_leverrifle/v_leverrifle_scout.mdl"
-			"model_world"		"models/weapons/w_models/w_leverrifle/w_leverrifle.mdl"
-			"attach_to_hands"	"2"
-			"static_attrs"
+			"static_attrs"																		// Static attributes! To keep things semi-short, I'll shove backend stuff up here if I can possibly do so.
 			{
 				"min_viewmodel_offset"	"10 0 -11"
+				"class select override vcd"				"class_select_nailgun"					// The Nailgun select looks a lot more neutral than his Scattergun one - it's good for this wep.
+				"clip size penalty hidden"				"0.7"									// 4 shots!
+				"fire rate penalty hidden"				"0.576"									// Boost fire rate to match Shortstop's
+				"damage bonus hidden"					"1.73"									// If all pellets hit, point-blank, does about 72 damage, give or take.
 			}
-
-			"image_inventory"		"backpack/weapons/w_models/w_scattergun"
-			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
-			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+			"attributes"																		// Generally speaking, I tend to put the "visible" attributes down here, but Static Attrs works just fine too!
+			{
+				"shortstop explain"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"	"1"
+				}
+				"hidden separator"		"1"
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"	"2.7"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"				"0.4"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.8"
+				}
+				"scattergun no reload single"
+				{
+					"attribute_class"	"set_scattergun_no_reload_single"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Short_Stop.Single"
+				"sound_burst"	"Weapon_Short_Stop.SingleCrit"
+				"sound_reload"		"Weapon_Short_Stop.Reload"
+				"muzzle_flash"	"muzzle_bignasty"
+				"tracer_effect"	"bullet_bignasty_tracer01"
+			}
+			"mouse_pressed_sound"		"#items/pickup_small.wav"
+			"drop_sound"				"#ui/item_light_gun_drop.wav"
 		}
 		"2024" // The Silent Treatment
 		{
@@ -3264,6 +3312,11 @@
 			}
 			"attributes"
 			{
+				"headshot explain"
+				{
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
+				}
 				"can headshot"
 				{
 					"attribute_class"		"can_headshot"
@@ -3294,12 +3347,7 @@
 					"attribute_class"		"crit_dmg_falloff"
 					"value"				"1"
 				}
-				//"headshot is minicrit"
-				//{
-				//	"attribute_class"	"headshot_is_minicrit"
-				//	"value"				"1"
-				//}
-			}//
+			}
 			"visuals"
 			{
 				"sound_single_shot"	"Weapon_UrbanProfessional.Single"
@@ -3486,24 +3534,106 @@
 			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
 			"drop_sound"		"ui/item_wood_pole_drop.wav"
 		}
-		"608" // knight helmet
+		"4742" // demo helmet
 		{
-			"name"			"glasgow great helm"
-			"prefab"		"weapon_demoman_helmet"
+			"name"			"Scotch Bonnet"
+			"item_class"		"tf_wearable"
 			"show_in_armory"	"1"
-			"propername"	"1"
-			"item_name"			"Knight Helmet"
+			"item_type_name" 	"Helmet"
+			"item_name"	"Scotch Bonnet"
 			"item_description"	""
+			"item_slot"		"secondary"
+			"equip_region"	"back"
+			"anim_slot"	"FORCE_NOT_USED"
+			"item_quality"		"normal"
+			"propername"		"0"
 			"min_ilevel"		"10"
 			"max_ilevel"		"10"
-			"image_inventory"	"backpack/workshop/player/items/demo/jul13_pillagers_barrel/jul13_pillagers_barrel"
-			"model_player"		"models/workshop/player/items/demo/jul13_pillagers_barrel/jul13_pillagers_barrel.mdl"
+			"image_inventory"	"backpack/player/items/demo/demo_scotchbonnet"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/player/items/demo/demo_scotchbonnet.mdl"
+			"extra_wearable" "models/player/items/demo/demo_scotchbonnet.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"attributes"
+			{
+				"dmg taken from fire reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_fire"
+					"value"			"0.75"
+				}
+				"dmg taken from blast reduced"
+				{
+					"attribute_class"	"mult_dmgtaken_from_explosions"
+					"value"			"0.75"
+				}
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value"				"0.7"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
 		}
-		"131"
+		"307"
 		{
-			"name"			"knight armor"
-			"prefab"	"valve weapon_demoman_armor"
-			"xifier_class_remap"	"weapon_targe"
+			"name"	"The Ullapool Caber"
+			"item_class"	"tf_weapon_stickbomb"
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_StickBomb"
+			"item_name"	"#TF_UllapoolCaber"
+			"item_description"	"big kaboom"
+			"item_logname"	"ullapool_caber"
+			"item_iconname"	"ullapool_caber"
+			"item_slot"	"melee"
+			"item_quality"	"normal"
+			"propername"	"1"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory" "backpack/workshop/weapons/c_models/c_caber/c_caber"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 				"35"
+			"model_player"	"models/workshop/weapons/c_models/c_caber/c_caber.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"12 0 -17"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+			"attributes"
+			{
+				"caber explain"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"hidden separator"		"1"
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.75"
+				}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"99" // 2.33 to survive with scotch bonnet
+				}
+			}
 		}
 		"4267" // double trouble
 		{
@@ -3562,19 +3692,24 @@
 				"Blast radius decreased"
 				{
 					"attribute_class"	"mult_explosion_radius"
-					"value"	"0.4"
+					"value"	"0.5"
+				}
+				"pipes surface explode explain"
+				{
+					"attribute_class"		"pipes_surface_explode_explain"
+					"value"				"1"
 				}
 				"grenade no spin"
 				{
 					"attribute_class"	"grenade_no_spin"
 					"value"	"1"
 				}
+				"hidden separator"		"1"
 				"sticky air burst mode"
 				{
 					"attribute_class"	"set_detonate_mode"
 					"value"	"3"
 				}
-				"hidden separator"		"1"
 				"self dmg push force increased"
 				{
 					"attribute_class"	"mult_dmgself_push_force"
@@ -3689,37 +3824,47 @@ the humble efficient eliminator:"
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"mortal mortar explain"
 				{
-					"attribute_class"		"mult_dmg"
-					"value"				"1.1075"
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
 				}
 				"mod mini-crit airborne"
 				{
 					"attribute_class"	"mini_crit_airborne"
 					"value" "1"
 				}
-				"Blast radius decreased"
+				"damage bonus"
 				{
-					"attribute_class"	"mult_explosion_radius"
-					"value"	"0.3"
-				}
-				"rocket gravity"
-				{
-					"attribute_class"	"mod_rocket_gravity"
-					"value"				"1"
+					"attribute_class"		"mult_dmg"
+					"value"				"1.1075"
 				}
 				"Projectile speed increased"
 				{
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"1.8"
 				}
-				"no damage falloff over distance"
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"0.3"
+				}
+				"mortal mortar arc explain"
+				{
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
+				}
+				"hidden separator"		"1"
+								"no damage falloff over distance"
 				{
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
 				}
-				"hidden separator"		"1"
+				"rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"1"
+				}
 				"custom projectile model"
 				{
 					"attribute_class"	"custom_projectile_model"
@@ -3776,6 +3921,11 @@ the humble efficient eliminator:"
 				{
 					"attribute_class"		"mult_dmg"
 					"value" 	"1.2"
+				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"		"mult_dmg_vs_buildings"
+					"value" 	"2.0"
 				}
 				"Repair rate decreased"
 				{
@@ -3896,6 +4046,16 @@ the humble efficient eliminator:"
 			}
 			"attributes"
 			{
+				"weapon spread bonus"
+				{
+					"attribute_class"		"mult_spread_scale"
+					"value"				"0.5"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"		"mult_projectile_speed"
+					"value"				"1.35"
+				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
@@ -3910,16 +4070,6 @@ the humble efficient eliminator:"
 				{
 					"attribute_class"	"mult_maxammo_primary"
 					"value"				"0.8"
-				}
-				"Projectile speed increased"
-				{
-					"attribute_class"		"mult_projectile_speed"
-					"value"				"1.35"
-				}
-				"weapon spread bonus"
-				{
-					"attribute_class"		"mult_spread_scale"
-					"value"				"0.5"
 				}
 			}
 			"visuals"
@@ -3950,122 +4100,6 @@ the humble efficient eliminator:"
 	}
 	"prefabs"
 	{
-		"weapon_demoman_armor"
-		{
-			"enabled"		"1"
-			"item_class"		"tf_wearable_demoshield"
-			"base_item_name"	"Knight Armor"
-			"show_in_armory"	"1"
-			"item_type_name" 	"Medieval Knight Armor"
-			"item_name"		"Knight Armor"
-			"item_description"	""
-			"item_slot"		"secondary"
-			"equip_region"	"back"
-			"anim_slot"		"FORCE_NOT_USED"
-			"item_quality"		"normal"
-			"propername"	"1"
-			"min_ilevel"		"1"
-			"max_ilevel"		"99"
-			"item_logname"	"demoarmor"
-			"item_iconname"	"demoarmor"
-			"image_inventory"	"backpack/workshop/player/items/demo/mail_bomber/mail_bomber"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"inspect_panel_dist" 			"33"
-			"model_player"	"models/workshop/player/items/demo/mail_bomber/mail_bomber.mdl"
-			"act_as_wearable" "1"
-			"attach_to_hands"	"0"
-			"attach_to_hands_vm_only"	"1"
-			"drop_type"	"drop"
-			"used_by_classes"
-			{
-				"demoman"	"1"
-			}
-			"attributes"
-			{
-				"dmg taken from fire reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_fire"
-					"value"			"0.5"
-				}
-				"dmg taken from blast reduced"
-				{
-					"attribute_class"	"mult_dmgtaken_from_explosions"
-					"value"			"0.7"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-				"rocket jump damage reduction"
-				{
-					"attribute_class"	"rocket_jump_dmg_reduction"
-					"value"				"0.700000"
-				}
-			}
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"		"ui/item_wood_pole_drop.wav"
-			"xifier_class_remap"	"weapon_targe"
-		}
-		"weapon_demoman_helmet"
-		{
-			"enabled"		"1"
-			"item_class"		"tf_wearable"
-			"item_type_name" 	"Medieval Knight Helmet"
-			"base_item_name"	"The Bootlegger"
-			"show_in_armory"	"1"
-			"item_slot"		"primary"
-			"equip_region"	"feet"
-			"anim_slot"		"FORCE_NOT_USED"
-			"item_quality"		"normal"
-			"propername"	"0"
-			"min_ilevel"		"10"
-			"max_ilevel"		"10"
-			"act_as_wearable" "1"
-			"drop_type"	"none"
-			"used_by_classes"
-			{
-				"demoman"	"1"
-			}
-			"attributes"
-			{
-				"mult charge turn control"
-				{
-					"attribute_class"	"charge_turn_control"
-					"value"			"3"
-				}
-				"max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value" "25"
-				}
-				"allowed in medieval mode"
-				{
-					"attribute_class"	"allowed_in_medieval_mode"
-					"value"	"1"
-				}
-				"kill refills meter"
-				{
-					"attribute_class"	"kill_refills_meter"
-					"value"			"0.25"
-				}
-				"move speed bonus shield required"
-				{
-					"attribute_class"	"mult_player_movespeed_shieldrequired"
-					"value" "1.10"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"head"			"1"
-				}
-			}
-			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
-			"drop_sound" 			"ui/item_hat_drop.wav"
-		}
 		"weapon_shotgun" // Shotgun
 		{
 			"item_name"			"#TF_Weapon_Shotgun"
@@ -14396,14 +14430,85 @@ the humble efficient eliminator:"
 			"effect_type"			"positive"
 			"stored_as_integer"		"0"
 		}
-		"7703"
+		"4001"
 		{
-			"name"					"Ironclad Replacer"
-			"description_string"	"Replaces your Sentry with an Ironclad Artillery Sentry"
+			"name"					"caber explain"
+			"attribute_class"		"caber_explain"
+			"description_string"	"Upon use: explode yourself and everyone around you"
 			"description_format"	"value_is_additive"
 			"hidden"				"0"
-			"custom_color"			"225 215 0 255"
 			"effect_type"			"neutral"
+			"stored_as_integer"		"1"
+		}
+		"4002"
+		{
+			"name"					"headshot explain"
+			"attribute_class"		"headshot_explain"
+			"description_string"	"Deals crits on headshot"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"1"
+		}
+		"4003"
+		{
+			"name"					"mp40 explain"
+			"attribute_class"		"mp40_explain"
+			"description_string"	"Fires high speed nails instead of syringes"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"1"
+		}
+		"4004"
+		{
+			"name"					"mp40 regen explain"
+			"attribute_class"		"mp40_regen_explain"
+			"description_string"	"No passive health regen"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"negative"
+			"stored_as_integer"		"1"
+		}
+		"4005"
+		{
+			"name"					"mortal mortar explain"
+			"attribute_class"		"mortal_mortar_explain"
+			"description_string"	"Rockets have heavily reduced damage fall off"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"1"
+		}
+		"4006"
+		{
+			"name"					"mortal mortar arc explain"
+			"attribute_class"		"mortal_mortar_explain"
+			"description_string"	"Rockets travel under a slight arc"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"1"
+		}
+		"4007"
+		{
+			"name"					"shortstop explain"
+			"attribute_class"		"shortstop_explain"
+			"description_string"	"Fires less powerful but more accurate shots from a 4 shot clip which is reloaded at once."
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"1"
+		}
+		"4008"
+		{
+			"name"					"pipes surface explode explain"
+			"attribute_class"		"pipes_surface_explode_explain"
+			"description_string"	"Launched bombs explode on contact with surfaces."
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"1"
 		}
 	}
 	"attribute_controlled_attached_particles"

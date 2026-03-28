@@ -6304,6 +6304,25 @@
 }
 
 // ------------------------------------------------------------------------------------ //
+// MP40
+// ------------------------------------------------------------------------------------ //
+"Weapon_mp40.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"0.6"
+	"wave"		")weapons/mp40_bleed_shoot.wav"
+}
+
+"Weapon_mp40.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"0.6"
+	"wave"		")weapons/mp40_bleed_shoot_crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
 // DRAGONS FURY
 // ------------------------------------------------------------------------------------ //
 "Weapon_DragonsFury.Single"
