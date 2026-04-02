@@ -13970,6 +13970,25 @@
 }
 
 // ------------------------------------------------------------------------------------ //
+// Suppressed Pistol
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Suppressed_Pistol.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/socom_pistol.wav"
+}
+"Weapon_Suppressed_Pistol.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/socom_pistol_Crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
 // Spark shotgun, the bigger one
 // ------------------------------------------------------------------------------------ //
 
