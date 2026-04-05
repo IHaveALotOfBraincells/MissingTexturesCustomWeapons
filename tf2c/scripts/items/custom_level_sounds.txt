@@ -5544,3 +5544,68 @@
 	"volume"		"1.0"
 	"wave"			")weapons/socom_pistol_Crit.wav"
 }
+
+// ------------------------------------------------------------------------------------ //
+// Sentry Revolver
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Sentry_Revolver.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Sentry_Revolver_Fire.wav"
+}
+"Weapon_Sentry_Revolver.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Sentry_Revolver_FireCrit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// Slugger
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Slugger.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Slugger_Fire.wav"
+}
+"Weapon_Slugger.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/Slugger_FireCrit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// PISTOL KNIFE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_PistolKnife.Draw"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			")weapons\draw_pistol_knife.wav"
+}
+"Weapon_PistolKnife.DrawMovement"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			")weapons\draw_pistol_knife_movement.wav"
+}
+
+"Weapon_PistolKnife.Hit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_85dB"
+	"volume"		"1.0"
+	"wave"			")weapons\pistol_knife_hit.wav"
+}

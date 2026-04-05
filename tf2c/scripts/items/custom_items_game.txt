@@ -3105,11 +3105,11 @@ Animations by: 'Kylul'"
 				}
 				"heavy shotgun explain" "1"
 				"hidden separator" "1"
-				//"spread penalty"
-				//{
-				//	"attribute_class"	"mult_spread_scale"
-				//	"value" "1.25"
-				//}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value" "0.925"
+				}
 				"max health additive bonus"
 				{
 					"attribute_class"		"add_maxhealth"
@@ -3664,6 +3664,78 @@ Animations by: 'Kylul'"
 			"mouse_pressed_sound"		"#items/pickup_small.wav"
 			"drop_sound"				"#ui/item_light_gun_drop.wav"
 		}
+		"7102" // slugger
+		{
+			"name"				"slugger"
+			"item_name"			"slugger"
+			"item_type_name"	"#TF_Weapon_Scattergun"
+			"item_description"	"Model by: 'Haau'"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_pep_brawler_blaster"
+			"item_slot"		"primary"
+			"used_by_classes"
+			{
+				"Scout"	"1"
+			}
+
+			"model_player"		"models/weapons/c_models/c_pep_scattergun/c_pep_scattergun.mdl"
+			"model_world"		"models/weapons/c_models/c_pep_scattergun/c_pep_scattergun.mdl"
+			"attach_to_hands"	"1"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -11"
+			}
+			"attributes"
+			{
+				"headshot minicrit explain"
+				{
+					"attribute_class"		"VISUALONLY"
+					"value"				"1"
+				}
+				"can headshot"
+				{
+					"attribute_class"		"can_headshot"
+					"value"				"1"
+				}
+				//"clip size bonus"
+				//{
+				//	"attribute_class"	"mult_clipsize"
+				//	"value"				"1.333"
+				//}
+				"slugger explain" "1"
+				"slugger explain 2" "1"
+				"hidden separator" "1"
+				"damage bonus"
+				{
+					"attribute_class"	"mult_damage"
+					"value"				"7"
+				}
+				"shorter damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"0.85"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "0.111"
+				}
+				"headshot is minicrit"
+				{
+					"attribute_class"	"headshot_is_minicrit"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Slugger.Single"
+				"sound_burst"	"Weapon_Slugger.SingleCrit"
+			}
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_pep_scattergun/c_pep_scattergun_large.vtf"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
 		"7900" // The Silent Treatment
 		{
 			"name"				"silent treatment"
@@ -4055,7 +4127,7 @@ Animations by: 'Kylul'"
 		{
 			"name"				"efficient eliminator"
 			"item_name"			"Efficient Eliminator"
-			"item_type_name"	"SMG"
+			"item_type_name"	"Heavy SMG"
 			"item_description"	"Model by: 'Colteh'
 			Animations by: 'MrPurplePigeon'"
 			"item_quality"		"normal"
@@ -4244,10 +4316,20 @@ Animations by: 'Kylul'"
 					"attribute_class"		"build_small_sentries"
 					"value" 	"1"
 				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
 				"engineer sentry build rate multiplier"
 				{
 					"attribute_class"		"sentry_build_rate_multiplier"
 					"value" 	"1.35"
+				}
+				"buildings max level penalty"
+				{
+					"attribute_class"	"add_buildings_max_level"
+					"value"	"-2"
 				}
 				"hidden separator" "1"
 				"mod sentrygun cost"
@@ -4258,19 +4340,19 @@ Animations by: 'Kylul'"
 				"engy sentry damage bonus"
 				{
 					"attribute_class"		"mult_engy_sentry_damage"
-					"value" 	"0.6"
+					"value" 	"0.5"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"4601" // fatass
+		"7601" // fatass
 		{
 			"name"			"American Diet"
 			"item_class"		"tf_wearable"
 			"show_in_armory"	"1"
 			"item_type_name" 	"Obesity"
-			"item_name"	"American Diet"
+			"item_name"			"American Diet"
 			"item_description"	"Morbidly a beast."
 			"item_slot"		"secondary"
 			"equip_region"	"back"
@@ -4288,28 +4370,15 @@ Animations by: 'Kylul'"
 			{
 				"engineer"	"1"
 			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"0 0 -8"
+				"maxammo metal increased" "1.5"
+				"health regen" "4"
+				"move speed penalty" "0.9"
+			}
 			"attributes"
 			{
-				"max health additive bonus"
-				{
-					"attribute_class"	"add_maxhealth"
-					"value"				"25"
-				}
-				"health regen"
-				{
-					"attribute_class"	"add_health_regen"
-					"value"	"4"
-				}
-				"build rate bonus"
-				{
-					"attribute_class"	"mod_build_rate"
-					"value"	"0.9"
-				}
-				"buildings max level penalty"
-				{
-					"attribute_class"	"add_buildings_max_level"
-					"value"	"-2"
-				}
 				"american diet explain" "1"
 				//"mod sentrygun cost"
 				//{
@@ -4330,13 +4399,13 @@ Animations by: 'Kylul'"
 			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
 			"drop_sound"		"ui/item_pack_drop.wav"
 		}
-		"4602" // engi nail gun
+		"7602" // engi nail gun
 		{
 		    "tags"
 			{
 				"bots_cant_use"			"1"
 			}
-		    "name"						"TF_WEAPON_RIFLE_ENGI"
+		    "name"						"Engi Nailgun"
 			"show_in_armory"			"1"
 			"item_slot"					"primary"
 			"anim_slot"					"secondary"
@@ -4417,6 +4486,73 @@ Animations by: 'Kylul'"
 			}
 			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"7603" // Metal Revolver
+		{
+			"name"				"Sentry Pistol"
+			"item_description"	"Model by: 'Wowza'"
+			"item_name"			"Auto-Revolver"
+			"item_type_name"	"Jury Rigged Weapon"
+			"item_slot"			"secondary"
+			"anim_slot"			"secondary"
+			"item_class"		"tf_weapon_pistol"
+			"show_in_armory"	"1"
+
+			"image_inventory"			"backpack/weapons/c_models/c_sentry_revolver/c_sentry_revolver"
+			"model_world"				"models/weapons/c_models/c_sentry_revolver/c_sentry_revolver.mdl"
+			"model_player"				"models/weapons/v_models/v_sentry_revolver/v_sentry_revolver.mdl"
+			"attach_to_hands"		"2"
+
+			"used_by_classes"
+			{
+				"Engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+				"damage bonus" "1.35"
+			}
+			"attributes"
+			{
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"1"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.5"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"	"5"
+				}
+				"mod use metal ammo type"
+				{
+					"attribute_class"	"mod_use_metal_ammo_type"
+					"value"	"1"
+				}
+				"hidden separator" "1"
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.925"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Sentry_Revolver.Single"
+				"sound_burst"			"Weapon_Sentry_Revolver.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}
 	}
 	"prefabs"
@@ -14917,6 +15053,26 @@ Animations by: 'Kylul'"
 			"name"					"lead storm explain 2"
 			"attribute_class"		"explain"
 			"description_string"	"-75% bullets per shot"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"negative"
+			"stored_as_integer"		"1"
+		}
+		"4018"
+		{
+			"name"					"slugger explain"
+			"attribute_class"		"explain"
+			"description_string"	"Uses slug rounds to fire a single bullet with perfect accuracy"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"1"
+		}
+		"4019"
+		{
+			"name"					"slugger explain 2"
+			"attribute_class"		"explain"
+			"description_string"	"-22% damage"
 			"description_format"	"value_is_additive"
 			"hidden"				"0"
 			"effect_type"			"negative"
