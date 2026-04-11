@@ -2864,7 +2864,7 @@
 				"ubercharge rate bonus"
 				{
 					"attribute_class"	"mult_medigun_uberchargerate"
-					"value" "1.8"
+					"value" "2"
 				}
 				"hidden separator" "1"
 				"medigun charge is megaheal"
@@ -2899,7 +2899,7 @@
 				"Medic"	"1"
 			}
 
-			"model_player"		"models/weapons/c_models/c_proto_syringegun/c_proto_syringegun.mdl"
+			"model_player"		"models/weapons/c_models/c_puncture_test/c_puncture_test.mdl"
 		//	"model_world"		"models/weapons/w_models/w_syringe_rifle/w_syringe_proj.mdl"
 			"attach_to_hands"		"1"
 			"static_attrs"
@@ -2965,7 +2965,7 @@
 				"sound_single_shot"    "Weapon_mp40.Single"
 				"sound_burst" 		   "Weapon_mp40.SingleCrit"
 			}
-			"image_inventory"		"backpack/weapons/c_models/c_proto_syringegun/c_proto_syringegun_large.vtf"
+			"image_inventory"		"backpack/weapons/c_models/c_puncture_test/c_puncture_test_large.vtf"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
 		}
@@ -4508,15 +4508,14 @@ Animations by: 'Kylul'"
 			"mouse_pressed_sound"	"ui/item_bottle_pickup.wav"
 			"drop_sound"		"ui/item_bottle_drop.wav"
 		}
-		"7802" // austen smg
+		"7802" // eardrum eradicator
 		{
 			"name"				"TF_WEAPON_SMG"
-			"item_name"			"eardrum terrorizer"
+			"item_name"			"eardrum eradicator"
 			"item_type_name"	"#TF_Weapon_SMG"
 			"item_description"	"Model by: 'Haau'"
 			"item_quality"		"normal"
 			"propername" "1"
-
 			"item_class"	"tf_weapon_smg"
 			"item_slot"		"secondary"
 			"used_by_classes"
@@ -4552,17 +4551,11 @@ Animations by: 'Kylul'"
 					"attribute_class"	"mult_clipsize"
 					"value"				"0.6"
 				}
-				//"maxammo secondary increased"
-				//{
-				//	"attribute_class"		"mult_maxammo_secondary"
-				//	"value"				"0.72"
-				//}
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_Austen_Smg.Single"
 				"sound_burst"			"Weapon_Austen_Smg.SingleCrit"
-
 			}
 			"image_inventory"		"backpack/weapons/w_models/w_tecnine_smg/w_tecnine_large.vtf"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
