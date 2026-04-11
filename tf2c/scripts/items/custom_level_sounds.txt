@@ -5699,6 +5699,25 @@
 }
 
 // ------------------------------------------------------------------------------------ //
+// Austen Smg
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Austen_Smg.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/austen_smg_Fire.wav"
+}
+"Weapon_Austen_Sm.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			")weapons/austen_smg_FireCrit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
 // PISTOL KNIFE
 // ------------------------------------------------------------------------------------ //
 
@@ -5723,4 +5742,41 @@
 	"soundlevel"	"SNDLVL_85dB"
 	"volume"		"1.0"
 	"wave"			")weapons\pistol_knife_hit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// TANKGEWEHR
+// ------------------------------------------------------------------------------------ //
+"Weapon_Tankgewehr.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+    "pitch"		"98, 102"
+    "wave"		")weapons\tankgewehr_shoot.wav"
+}
+
+"Weapon_Tankgewehr.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+    "pitch"		"98, 102"
+	"wave"		")weapons\tankgewehr_shoot_crit.wav"
+}
+
+"Weapon_Obrez.BoltForward"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	".7"
+	"wave"		"weapons/tankgewehr_bolt_back.wav"
+}
+
+"Weapon_Obrez.BoltBack"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"	".7"
+	"wave"		"weapons/tankgewehr_shoot.wav"
 }
