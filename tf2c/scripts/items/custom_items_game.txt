@@ -2900,7 +2900,6 @@
 			}
 
 			"model_player"		"models/weapons/c_models/c_puncture_test/c_puncture_test.mdl"
-		//	"model_world"		"models/weapons/w_models/w_syringe_rifle/w_syringe_proj.mdl"
 			"attach_to_hands"		"1"
 			"static_attrs"
 			{
