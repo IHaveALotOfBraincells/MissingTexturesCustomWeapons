@@ -5519,6 +5519,30 @@
 }
 
 // ------------------------------------------------------------------------------------ //
+// Tommy sticky
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_TommySticky.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"pitch"		"95, 100"
+
+	"wave"		")weapons\flechette_shoot.wav"
+
+}
+"Weapon_TommySticky.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"pitch"		"95, 100"
+
+	"wave"			")weapons/flechette_shoot_crit.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
 // MP40
 // ------------------------------------------------------------------------------------ //
 "Weapon_mp40.Single"
@@ -5775,8 +5799,53 @@
 }
 
 // ------------------------------------------------------------------------------------ //
+// big owen
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_BigOwen.ClipEmpty"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+	"wave"		")weapons/minigun_empty.wav"
+}
+
+"Weapon_lmg.WindUp"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/lmg_wind_up.wav"
+}
+
+"Weapon_lmg.Fire"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/lmg_shoot.wav"
+}
+
+"Weapon_lmg.FireCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/lmg_shoot_crit.wav"
+}
+
+"Weapon_lmg.WindDown"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/lmg_wind_down.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
 // TANKGEWEHR
 // ------------------------------------------------------------------------------------ //
+
 "Weapon_Tankgewehr.Single"
 {
 	"channel"	"CHAN_WEAPON"
@@ -5809,4 +5878,17 @@
 	"soundlevel"	"SNDLVL_74dB"
 	"volume"	".7"
 	"wave"		"weapons/tankgewehr_shoot.wav"
+}
+
+// ------------------------------------------------------------------------------------ //
+// LEAD PIPE
+// ------------------------------------------------------------------------------------ //
+
+"Weapon_Pipe.HitWorld"
+{
+	"channel"	"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"	"1.0"
+    "pitch"		"98, 102"
+	"wave"		")weapons/pipe_HitWorld.wav"
 }
